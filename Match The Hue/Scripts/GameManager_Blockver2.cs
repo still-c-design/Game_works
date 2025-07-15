@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ゲームの中心となるスクリプト
+Blockの生成、テキストの生成、スコアの表示
+*/
+
 public class GameManager_Blockver2 : MonoBehaviour
 {
     [Header("spawn setting")]
@@ -29,7 +34,6 @@ public class GameManager_Blockver2 : MonoBehaviour
     private float _speedIncrease = 1.1f;
     private int _score = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnObjects());
