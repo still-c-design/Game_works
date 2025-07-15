@@ -14,7 +14,6 @@ public class ProbabilityButton : MonoBehaviour
     private GameObject button1;
     private GameObject button2;
 
-    // Start is called before the first frame update
     void Start()
     {
         CreateButton();
@@ -22,7 +21,7 @@ public class ProbabilityButton : MonoBehaviour
 
         UpdateHighScoreText();
     }
-
+   
     void CreateButton()
     {
         // ボタン1
@@ -34,6 +33,7 @@ public class ProbabilityButton : MonoBehaviour
         button2.GetComponent<Button>().onClick.AddListener(() => ButtonClicked(button2));
     }
 
+    // ボタンを生成する
     GameObject CreateButton(string buttonText, Vector2 position)
     {
         GameObject button = new GameObject(buttonText);
@@ -54,6 +54,7 @@ public class ProbabilityButton : MonoBehaviour
         return button;
     }
 
+    // ボタンが押された時の反応
     void ButtonClicked(GameObject clickedButton)
     {
         bool isWinner = Random.Range(0, 2) == 0; // ランダムで当たりかはずれかを決定
@@ -103,10 +104,5 @@ public class ProbabilityButton : MonoBehaviour
 
             UpdateHighScoreText();
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
