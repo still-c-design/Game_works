@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+流れていくオブジェクトにつけるスクリプト
+自分のBlockと流れてくるBlockの判定を行う
+間違っていればゲームオーバーへ
+
+*/
+
 public class ObjectMover_Blockver2 : MonoBehaviour
 {
     private Vector3 _targetPosition;
